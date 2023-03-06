@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .poly {
+    clip-path: circle(59% at 85% 7%);
+  }
+  .poly3 {
+    clip-path: circle(70% at 50% 3%);
+  }
+
+  .poly2 {
+    clip-path: circle(50% at 59% 50%);
+  }
+
+  .minline {
+    margin-inline: auto;
+  }
+
+  .diagonal {
+    position: relative;
+  }
+
+  .diagonal::after {
+    content: "";
+    background-image: linear-gradient(45deg, #68a883, #44689e65, #52143ac7);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: skewY(-5deg);
+  }
+}
